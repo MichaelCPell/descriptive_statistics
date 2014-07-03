@@ -1,5 +1,9 @@
 module DescriptiveStatistics
   def mode
-    self.group_by { |e| e }.values.max_by(&:size).first
+    if self.any?
+      self.group_by { |e| e }.values.max_by(&:size).first
+    else
+      "NaN"
+    end
   end 
 end
