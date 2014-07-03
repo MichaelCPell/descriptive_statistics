@@ -1,5 +1,9 @@
 module DescriptiveStatistics
   def mean
-    self.sum / self.number
+    if self.number > 0 
+      self.sum / self.number
+    else
+      "NaN"
+    end
   end 
 end
